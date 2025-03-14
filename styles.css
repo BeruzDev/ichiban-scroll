@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('./Akira\ Expanded\ Demo.otf');
+}
+
 *,
 *::before,
 *::after {
@@ -6,6 +11,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -28,7 +34,7 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
   margin-top: -360px;
   display: flex;
   align-items: flex-end;
@@ -46,15 +52,49 @@ header {
 }
 
 #scroll-dwn{
-	height: 500px;
+	height: 750px;
 	width: 100dvw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: monospace;
 	position: absolute;
-	z-index: 2;
+	z-index: 1;
+  animation: slideInDown 2500ms ease-out;
+  transform: translateX(-50%);
+  left: 50%;
 }
+#grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 38%;
+  height: 350px;
+  width: 100dvw;
+  position: absolute;
+  top: 400px;
+  z-index: 1;
+  font-family: monospace;
+
+	#description{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50%;
+  }
+
+	#browser{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50%;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
 @keyframes slideInDown {
   from {
     transform: translate3d(-50%, -100%, 0);
