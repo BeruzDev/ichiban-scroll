@@ -162,7 +162,7 @@ header {
 /* Aplicamos la animación en cascada */
 .line, #text-content, #nav, .link {
   opacity: 0;
-  animation: reveal 750ms ease-out forwards;
+  animation: reveal 1s ease-out forwards;
 }
 
 .line { animation-delay: 0.2s; }
