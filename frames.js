@@ -9,7 +9,7 @@ const main = document.querySelector('main')
 // Crer lineas en html
 const createLine = () => {
 	document.querySelectorAll('.line').forEach((line, index) => {
-		const numLines = index === 0 ? 9 : 5
+		const numLines = index === 0 ? 8 : 4
 		for (let i = 0; i < numLines; i++) {
 			const lineElement = document.createElement('div')
 			lineElement.classList.add('under-line')
