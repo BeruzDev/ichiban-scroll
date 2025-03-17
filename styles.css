@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('./Akira\ Expanded\ Demo.otf');
+  src: url('./assets/Akira\ Expanded\ Demo.otf');
 }
 
 *,
@@ -100,7 +100,7 @@ header {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         font-size: 16px;
-        border-bottom: 1px solid #949DA5;
+        border-bottom: 1px solid rgb(112, 114, 118);
         cursor: pointer;
 
         .reference{
@@ -119,7 +119,7 @@ header {
 
   .line{
     .under-line{
-      border-top: 1px solid #949DA5;
+      border-top: 1px solid rgb(112, 114, 118);
       height: 30px; 
       
     }
