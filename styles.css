@@ -179,6 +179,66 @@ a:visited {
   }
 }
 
+#bot-container {
+  height: auto;
+  width: 650px;
+  position: absolute;
+  top: 2050px;
+  z-index: 2;
+  color: rgb(29, 41, 57);
+  display: flex;
+  flex-direction: column;
+  margin-left: 310px;
+
+  #title {
+    width: 70%;
+    font-family: 'Akira Expanded';
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  #kanji {
+    font-family: 'Akira Expanded';
+    display: flex;
+    font-size: 220px;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+    left: -20px;
+  }
+
+  #bento{
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+
+    .cuadricula{
+      overflow: hidden;
+
+      .points{
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .text-desc{
+      font-family: monospace;
+      font-size: 16px;
+      color: rgb(29, 41, 57);
+      line-height: 1.6;
+    }
+  }
+}
+
 @keyframes slideInDown {
   from {
     transform: translate3d(-50%, -100%, 0);

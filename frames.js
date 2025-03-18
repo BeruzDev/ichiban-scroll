@@ -5,21 +5,24 @@ const MAX_FRAMES = 151
 
 // Elemento main
 const main = document.querySelector('main')
+// Elemento grid-container
+const gridContainer = document.getElementById('grid-container')
+// Elemento scroll-dwn
+const scollDwn = document.getElementById('scroll-dwn')
 
 // Crer lineas en html
 const createLine = () => {
-	document.querySelectorAll('.line').forEach((line, index) => {
-		const numLines = index === 0 ? 8 : 4
-		for (let i = 0; i < numLines; i++) {
-			const lineElement = document.createElement('div')
-			lineElement.classList.add('under-line')
-			if(i === numLines -1){
-				lineElement.classList.add('last-line')
-			}
-			line.appendChild(lineElement)
-		}
-	})
-		
+  document.querySelectorAll('.line').forEach((line, index) => {
+    const numLines = index === 0 ? 8 : 4
+    for (let i = 0; i < numLines; i++) {
+      const lineElement = document.createElement('div')
+      lineElement.classList.add('under-line')
+      if (i === numLines - 1) {
+        lineElement.classList.add('last-line')
+      }
+      line.appendChild(lineElement)
+    }
+  })
 }
 
 createLine()
@@ -55,23 +58,31 @@ let lastFrameUpdate = 0
 window.addEventListener('scroll', () => {
   // Comprobar el ultimo frame
   if (Date.now() - lastFrameUpdate < 1) return true
-
   // Actualizamos el contador
   lastFrameUpdate = Date.now()
-
   // Posición actual de scroll
   const scrollPosition = window.scrollY
-
   // Calcular el porcentaje del scroll
   const scrollFraction = scrollPosition / maxScroll
-
   // Calculamos que frame toca ahora
   const frame = Math.floor(scrollFraction * MAX_FRAMES)
-
   // Si el frame que le toca es el mismo que ya tenia evitamos actualizar
   if (currentFrame !== frame) {
     // Creamos el id del nombre del archivo
     updateImage(frame)
     currentFrame = frame
   }
+
+  // Sroll vertical
+  const scrollY = window.scrollY
+  // Opacidad inicial
+  const fadeStart = 0
+  // Opacidad final
+  const fadeEnd = 600
+
+  // Normalizacion entre 1 - 0
+  let opacity = 1 - Math.min(1, (scrollY - fadeStart) / (fadeEnd - fadeStart))
+  // Aplicar efecto al grid-container y al scroll down
+  gridContainer.style.opacity = opacity
+  scollDwn.style.opacity = opacity
 })
