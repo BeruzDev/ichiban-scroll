@@ -322,3 +322,92 @@ a:visited {
 #nav {
   animation-delay: 1s;
 }
+
+
+@media (max-width: 1366px) {
+  header {
+    height: 700px;
+    width: 700px;
+
+    img {
+      width: auto;
+      height: 40px;
+      margin-bottom: 50px;
+      margin-top: 500px;
+    }
+  }
+
+  #scroll-dwn {
+    height: 400px;
+  }
+
+  #grid-container {
+    top: 180px;
+
+    #description{
+      margin-left: 20%;
+    }
+
+    #browser{
+      margin-right: 20%;
+    }
+
+    .reference{
+      margin-left: 0 !important;
+    }
+  }
+
+  #bot-container {
+    width: 500px;
+    margin-left: 100px;
+  }
+
+  #title{
+    font-size: 20px !important;
+  }
+
+  #kanji {
+    font-size: 150px !important;
+  }
+
+  .text-desc {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+
+@media (max-width: 1170px) {
+  /* Ajustes específicos para iPhone 15 */
+  header {
+    width: 400px;
+    height: 400px;
+  }
+
+  #scroll-dwn {
+    height: 400px;
+  }
+
+  #grid-container {
+    column-gap: 10%;
+  }
+
+  #bot-container {
+    width: 400px;
+    margin-left: 50px;
+  }
+
+  #kanji {
+    font-size: 150px;
+  }
+
+  #bento {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+
+  .text-desc {
+    font-size: 12px;
+  }
+}
+
