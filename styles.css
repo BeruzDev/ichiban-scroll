@@ -70,6 +70,50 @@ a:visited {
   animation: slideInDown 2500ms ease-out;
   transform: translateX(-50%);
   left: 50%;
+  grid-column-gap: .75rem;
+
+  #arrow-cont{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border: 1px solid rgb(29, 41, 57);
+    border-radius: 1.5px;
+    height: 17px;
+    width: 17px;
+    overflow: hidden;
+    position: relative;
+
+    #arrow-top,
+    #arrow-dwn {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: arrowMove 1s infinite;
+    }
+
+    #arrow-top{
+      animation-delay: 0s;
+    }
+
+    #arrow-dwn{
+      animation-delay: 0.5;
+    }
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
 }
 
 #grid-container {
