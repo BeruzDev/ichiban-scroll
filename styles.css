@@ -376,12 +376,18 @@ a:visited {
   }
 }
 
+@media (max-width: 430px) {
 
-@media (max-width: 1170px) {
-  /* Ajustes específicos para iPhone 15 */
   header {
-    width: 400px;
-    height: 400px;
+    height: 700px;
+    width: 700px;
+
+    img {
+      width: auto;
+      height: 40px;
+      margin-bottom: 50px;
+      margin-top: 500px;
+    }
   }
 
   #scroll-dwn {
@@ -389,7 +395,25 @@ a:visited {
   }
 
   #grid-container {
-    column-gap: 10%;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    #description{
+      margin: 0 25px;
+      
+      #text-content{
+        background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+        backdrop-filter: blur(10px); /* Aplica el desenfoque */
+        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+        padding: 1rem; /* Añade un poco de padding para que el contenido no toque los bordes */
+        border-radius: 10px;
+      }
+    }
+    #browser{
+      margin: 0 25px;
+    }
   }
 
   #bot-container {
@@ -402,12 +426,15 @@ a:visited {
   }
 
   #bento {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
+    width: 50% !important;
+    .cuadricula{
+      padding-bottom: -100px !important;
+
+    }
   }
 
   .text-desc {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
