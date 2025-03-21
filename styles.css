@@ -380,6 +380,10 @@ a:visited {
 }
 
 @media (max-width: 430px) {
+  img {
+    width: 80%;
+    height: 100%;
+  }
 
   header {
     height: 700px;
